@@ -24,19 +24,19 @@ If you want to run this React App locally in your computer, you need to follow t
 
 The easiest way to test and see the result of the app development is by clicking the link below:
 
-https://github.com/evandrolorran
+https://uniqueify-react-app.herokuapp.com/
 
-## How to Test - GET Request
+## How to Test - Step by Step
 
         **In progress**
 
-## Tools used to build this API:
+## Tools used to build this React-App:
 
-- [Node.js](https://nodejs.org/en/)
-- [Express](https://expressjs.com/)
-- Cors
-- [cURL](https://curl.haxx.se/)
-- [Visual Studio Code](https://code.visualstudio.com/)
+- [React](https://reactjs.org/)
+- [Styled Components](https://www.styled-components.com/)
+- [Axios](https://github.com/axios/axios)
+- [VS Code](https://code.visualstudio.com/)
+- [Heroku](https://www.heroku.com/)
 
 ## Node.js API Unique-ify
 
@@ -44,7 +44,7 @@ https://github.com/evandrolorran
 
 ### Author
 
-The React App was developed by [evandrolorran](https://github.com/evandrolorran) for Playground Inc [Playgroung Inc. Company](https://playgroundinc.com/) in order to show the development skill level in Node.js.
+The React App was developed by [evandrolorran](https://github.com/evandrolorran) for Playground Inc [Playgroung Inc. Company](https://playgroundinc.com/) in order to show the development skill level in React/Front-End.
 
 ### Contact
 
