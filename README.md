@@ -1,6 +1,6 @@
 # Uniqueify-React-App - Playground Inc.
 
-<img src="./doc/images/Nodejs-API-Server.jpg" width="400" height="300" align="right">
+<img src="./src/assets/images/react-background.png" width="350" height="200" align="right">
 
 ## Description
 
@@ -10,7 +10,7 @@ If text is a string composed of only letters (A-Z in any combination of upper an
 
 Otherwise the endpoint should return an error accompanied with the message “Please only enter letters A-Z or spaces.”
 
-## How to Run this API locally
+## How to Run this React App locally
 
 Clone or download this repository, then open it in your preferred IDE/Code Editor:
 
@@ -18,15 +18,17 @@ Clone or download this repository, then open it in your preferred IDE/Code Edito
 - [Sublime Text](https://www.sublimetext.com/)
 - [Brackets](http://brackets.io/)
 
-If you want to run this API locally in your computer, you need to follow these steps
+If you want to run this React App locally in your computer, you need to follow these steps
 
-The easiest way to test and see the result of the GET request is by clicking the link below:
+        **In progress**
+
+The easiest way to test and see the result of the app development is by clicking the link below:
 
 https://github.com/evandrolorran
 
 ## How to Test - GET Request
 
-Use left-right and up-down arrow keys to move the player from block to block. Collision with enemy(Hands) results in moving the player to start position, while reaching the basket you score 2 points.
+        **In progress**
 
 ## Tools used to build this API:
 
@@ -36,13 +38,13 @@ Use left-right and up-down arrow keys to move the player from block to block. Co
 - [cURL](https://curl.haxx.se/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
-## Unique-ify - Front-End React App
+## Node.js API Unique-ify
 
-[Unique-ify - React App](https://github.com/evandrolorran/uniqueify-react-app)
+[Unique-ify - API](https://github.com/evandrolorran/api-uniqueify)
 
 ### Author
 
-The API was developed by [evandrolorran](https://github.com/evandrolorran) for Playground Inc [Playgroung Inc. Company](https://playgroundinc.com/) in order to show the development skill level in Node.js.
+The React App was developed by [evandrolorran](https://github.com/evandrolorran) for Playground Inc [Playgroung Inc. Company](https://playgroundinc.com/) in order to show the development skill level in Node.js.
 
 ### Contact
 
