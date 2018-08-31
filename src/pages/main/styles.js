@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const LineBlock = styled.hr`
   width: 100%;
@@ -81,6 +81,7 @@ export const Button = styled.button`
   display: block;
   width: 115px;
   height: 48px;
+  background: transparent;
   border: 2px solid #4a90e2;
   border-radius: 5px;
   margin-top: 20px;
