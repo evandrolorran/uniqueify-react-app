@@ -1,86 +1,78 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 
 import {
   MainDiv,
   Title,
   Input,
   Button,
-  InputLabel,
-  LabelError,
-  LabelUniqueResult,
-  UniqueStringResult,
-  InputError,
-  MainDivHidden,
   LineBlock,
-} from './styles';
+  CustomLabel
+} from "./styles";
 
 const api = axios.create({
-  baseURL: 'https://api-uniqueify.herokuapp.com/',
+  baseURL: "https://api-uniqueify.herokuapp.com/"
 });
 
 class Main extends Component {
   state = {
-    stringToUniqueify: '',
-    uniquefiedString: '',
-    errorMessage: '',
+    stringToUniqueify: "",
+    uniquefiedString: "",
+    errorMessage: ""
   };
 
-  handleGetUniqueLetters = async (e) => {
+  handleGetUniqueLetters = async e => {
     e.preventDefault();
 
     await api
-      .get('/unique-ify', {
-        params: { text: this.state.stringToUniqueify },
+      .get("/unique-ify", {
+        params: { text: this.state.stringToUniqueify }
       })
-      .then((response) => {
+      .then(response => {
         this.setState({ uniquefiedString: response.data });
       })
-      .catch((error) => {
+      .catch(error => {
         if (error.response) {
           this.setState({ errorMessage: error.response.data });
         }
       });
   };
 
-  inputFocus = (e) => {
-    e.target.value = '';
-    this.setState({ errorMessage: '' });
-    this.setState({ uniquefiedString: '' });
-    this.setState({ stringToUniqueify: '' });
+  inputKeyPress = e => {
+    if (e.charCode === 13) {
+      e.target.blur();
+    }
+  };
+
+  inputFocus = e => {
+    e.target.value = "";
+    this.setState({ errorMessage: "" });
+    this.setState({ uniquefiedString: "" });
+    this.setState({ stringToUniqueify: "" });
   };
 
   render() {
-    let InputText = Input;
-    let DivUnique = MainDivHidden;
-
-    if (this.state.uniquefiedString) {
-      DivUnique = MainDiv;
-    }
-
-    if (this.state.errorMessage) {
-      InputText = InputError;
-      DivUnique = MainDivHidden;
-    }
     return (
       <MainDiv>
         <Title>Unique-ifier</Title>
-        <InputLabel>Text for processing</InputLabel>
+        <CustomLabel>Text for processing</CustomLabel>
         <form onSubmit={this.handleGetUniqueLetters}>
-          <InputText
+          <Input
+            setError={this.state.errorMessage}
             type="text"
             onChange={e => this.setState({ stringToUniqueify: e.target.value })}
             value={this.state.stringToUniqueify}
             onFocus={this.inputFocus}
+            onKeyPress={this.inputKeyPress}
           />
-          <LabelError>{this.state.errorMessage}</LabelError>
+          <CustomLabel error>{this.state.errorMessage}</CustomLabel>
           <Button type="submit">Unique-ify!</Button>
         </form>
-        <DivUnique>
+        <MainDiv hide={!this.state.uniquefiedString}>
           <LineBlock />
-          <LabelUniqueResult>Unique letters found:</LabelUniqueResult>
-          <UniqueStringResult>{this.state.uniquefiedString}</UniqueStringResult>
-        </DivUnique>
+          <CustomLabel uniqueLabel>Unique letters found:</CustomLabel>
+          <CustomLabel uniqueResult>{this.state.uniquefiedString}</CustomLabel>
+        </MainDiv>
       </MainDiv>
     );
   }

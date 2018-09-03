@@ -1,3 +1,7 @@
+/* Bigger than 1200px */
+@media only screen and (min-width: 1201px) {
+}
+
 /* Big tablet to 1200px (widths smaller taht the 1140px row) */
 @media only screen and (max-width: 1200px) {
 }
